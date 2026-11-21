@@ -21,6 +21,7 @@
         <!----FORMULÁRIO---->
 
             <form action="{{ url_for('dashboard') }}" method="POST">
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
                 
             <!----EMAIL----->
 
