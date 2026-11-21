@@ -1,0 +1,56 @@
+{% extends 'layouts/base_limpa.html'%}
+
+{% block titulo %}
+{% endblock %}
+
+{% block conteudo %}
+
+   
+<!-----LOGIN----->
+
+    <div class="container my-5 main-container d-flex align-items-center justify-content-center">
+        <div class="card-form login-card w-100 shadow-lg">
+            
+        <!----PARTE DE CIME DO CARD DE LOGIN---->
+
+            <div class="text-center mb-4">
+                <h2 class="display-5 fw-bold text-primary m-0">Cine Club</h2>
+                <p class="text-white small">Entre com suas credenciais para acessar</p>
+            </div>
+
+        <!----FORMULÁRIO---->
+
+            <form action="{{ url_for('dashboard') }}" method="POST">
+                
+            <!----EMAIL----->
+
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="nome@exemplo.com" required>
+                    <label for="email">E-mail</label>
+                </div>
+
+            <!----SENHA----->
+
+                <div class="form-floating mb-4">
+                    <input type="password" class="form-control" id="senha" name="senha" placeholder="Sua senha" required>
+                    <label for="senha">Senha</label>
+                </div>
+
+            <!----BOTÃO DE ENVIAR---->
+
+                <button type="submit" class="btn btn-save w-100 py-3 text-uppercase fw-bold shadow-sm mb-3">
+                     Entrar
+                </button>
+
+            <!----REDIRECIONAR PARA CADASTRO---->
+                
+                <div class="text-center mt-3">
+                    <span class="text-white small">Ainda não possui uma conta?</span>
+                    <a href="{{ url_for('inserir_usuarios') }}" class="text-primary text-decoration-none fw-bold small ms-1">Cadastre-se</a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

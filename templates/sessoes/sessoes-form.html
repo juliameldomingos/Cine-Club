@@ -1,0 +1,73 @@
+{% extends 'layouts/base_menu.html'%}
+
+{% block titulo %}
+Cadastro
+{% endblock %}
+
+
+{% block conteudo %}
+
+    <!----TITULO---->
+
+    <div class="container my-5 main-container">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h3 class="fw-bold text-primary m-0"><i class="bi bi-person-plus-fill text-primary me-2"></i>Cadastro de Sessões</h3>
+            <a href="{{ url_for('dashboard') }}" class="btn btn-link text-decoration-none text-muted"><i class="bi bi-arrow-left me-1"></i> Voltar para o inicio</a>
+        </div>
+
+        <div class="card-form">
+            <form action="/sessoes" method="POST">
+   
+            <!----NOME DO FILME---->
+                
+                <div class="row g-3 mb-4">
+                    <div class="col-md-6">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Título do Filme" required>
+                            <label for="titulo"> Nome do Filme</label>
+                        </div>
+                    </div>
+
+                <!----DURAÇÃO---->
+
+                    <div class="col-md-2">
+                        <div class="form-floating">
+                            <input type="number" min="1" class="form-control" id="duracao" name="duracao" placeholder="Duração em minutos" required>
+                            <label for="duracao"> Duração (min)</label>
+                        </div>
+                    </div>
+
+                <!----SALA---->
+
+                    <div class="col-md-2">
+                        <div class="form-floating">
+                            <input type="number" min="1" class="form-control" id="sala" name="sala" placeholder="Sala" required>
+                            <label for="sala"> Sala</label>
+                        </div>
+                    </div>
+
+                <!--VALOR---->
+
+                    <div class="col-md-2">
+                        <div class="form-floating">
+                            <input type="number" step="0.01" min="0" class="form-control" id="valor" name="valor" placeholder="0,00" required>
+                            <label for="valor"> Valor (R$)</label>
+                        </div>
+                    </div>
+
+                <!----BOTÕES DO FINAL---->
+
+                <div class="d-flex justify-content-end gap-2 mt-4 pt-3 border-top">
+                    <button type="reset" class="btn btn-clear">
+                         Limpar
+                    </button>
+                    <button type="submit" class="btn btn-save">
+                         Salvar Cadastro
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

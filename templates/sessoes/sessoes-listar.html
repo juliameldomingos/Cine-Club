@@ -1,0 +1,122 @@
+{% extends 'layouts/base_menu.html'%}
+
+{% block titulo %}
+Listagem
+{% endblock %}
+
+
+{% block conteudo %}
+
+<!----TITULO---->
+
+    <div class="container my-5 main-container">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h3 class="fw-bold text-white m-0">Sessões</h3>
+            <a href="{{ url_for('inserir_aluguel') }}" class="btn btn-save">
+                <i class="bi bi-plus-lg me-1"></i> Cadastrar Sessões
+            </a>
+        </div>
+
+
+    <!----CABEÇALHO DA TABELA LISTAR SESSOES---->
+
+        <div class="card-form p-0 overflow-hidden">
+            <div class="table-responsive">
+                <table class="table table-hover align-middle mb-0">
+                    <thead class="table-dark">
+                        <tr>
+                            <th class="ps-4">ID</th>
+                            <th>Título</th>
+                            <th>Duração</th>
+                            <th>Sala</th>
+                            <th>Valor</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    <!-- 1° FILME FIXO CRIADO NO HTML   -->
+
+                        <tr style="cursor: pointer;">
+                            <td class="ps-4 fw-bold text-muted">1</td>
+                            <td class="fw-semibold text-white">As Branquelas</td>
+                            <td>109 Min</td>
+                            <td>1</td>
+                            <td>R$ 20,00</td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-outline-warning rounded-2" title="Editar">
+                                    <i class="bi bi-pencil-square"></i> Editar
+                                </button>
+
+                                <button type="button" class="btn btn-sm btn-outline-danger rounded-2" title="Excluir">
+                                    <i class="bi bi-trash"></i> Excluir
+                                </button>
+                            </td>
+                        </tr>
+
+                    <!-- 2° FILME FIXO CRIADO NO HTML   -->
+
+                        <tr style="cursor: pointer;">
+                            <td class="ps-4 fw-bold text-muted">2</td>
+                            <td class="fw-semibold text-white">Pânico 4</td>
+                            <td>111 Min</td>
+                            <td>4</td>
+                            <td>R$ 25,00</td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-outline-warning rounded-2" title="Editar">
+                                    <i class="bi bi-pencil-square"></i> Editar
+                                </button>
+
+                                <button type="button" class="btn btn-sm btn-outline-danger rounded-2" title="Excluir">
+                                    <i class="bi bi-trash"></i> Excluir
+                                </button>
+                            </td>
+
+                    <!-- 3° FILME FIXO CRIADO NO HTML   -->
+
+                        <tr style="cursor: pointer;">
+                            <td class="ps-4 fw-bold text-muted">3</td>
+                            <td class="fw-semibold text-white">Interestelar</td>
+                            <td>169 Min</td>
+                            <td>3</td>
+                            <td>R$ 19,00</td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-outline-warning rounded-2" title="Editar">
+                                    <i class="bi bi-pencil-square"></i> Editar
+                                </button>
+
+                                <button type="button" class="btn btn-sm btn-outline-danger rounded-2" title="Excluir">
+                                    <i class="bi bi-trash"></i> Excluir
+                                </button>
+                            </td>
+                        </tr>
+
+                    <!-- 4° FILME FIXO CRIADO NO HTML   -->
+
+                        <tr style="cursor: pointer;">
+                            <td class="ps-4 fw-bold text-muted">4</td>
+                            <td class="fw-semibold text-white">Infantil</td>
+                            <td>97 Min</td>
+                            <td>2</td>
+                            <td>R$ 16,00</td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-outline-warning rounded-2" title="Editar">
+                                    <i class="bi bi-pencil-square"></i> Editar
+                                </button>
+
+                                <button type="button" class="btn btn-sm btn-outline-danger rounded-2" title="Excluir">
+                                    <i class="bi bi-trash"></i> Excluir
+                                </button>
+                            </td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+    
+{% endblock %}
